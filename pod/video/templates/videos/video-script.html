@@ -225,6 +225,17 @@ player.on('firstplay', function(){
   });
 {% endif %}
 
+player.ready(function(){
+  player.offset({
+    {% if request.GET.start and request.GET.start != '0' %}start : {{request.GET.start}},{%endif%}
+    {% if request.GET.end and request.GET.end != '0' %}end : {{request.GET.end}},{%endif%}
+    restart_beginning: true
+  });
+  {% if request.GET.tc and request.GET.tc != '0' %}
+  player.currentTime({{request.GET.tc}});
+  {%endif%}
+});
+
 
 {% if not video.is_video and event is None %}
   window.addEventListener('resize', function(){
