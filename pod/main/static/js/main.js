@@ -105,13 +105,13 @@ $(document).on("change", "#displaytime", function (e) {
   if ($("#displaytime").is(":checked")) {
     if ($("#txtpartage").val().indexOf("start") < 0) {
       $("#txtpartage").val(
-        $("#txtpartage").val() + "&start=" + parseInt(player.currentTime())
+        $("#txtpartage").val() + "&tc=" + parseInt(player.currentTime())
       );
       if ($("#txtpartage").val().indexOf("??") > 0)
         $("#txtpartage").val($("#txtpartage").val().replace("??", "?"));
       var valeur = $("#txtintegration").val();
       $("#txtintegration").val(
-        valeur.replace("/?", "/?start=" + parseInt(player.currentTime()) + "&")
+        valeur.replace("/?", "/?tc=" + parseInt(player.currentTime()) + "&")
       );
     }
     $("#txtposition").val(player.currentTime().toHHMMSS());
@@ -119,15 +119,15 @@ $(document).on("change", "#displaytime", function (e) {
     $("#txtpartage").val(
       $("#txtpartage")
         .val()
-        .replace(/(\&start=)\d+/, "")
-        .replace(/(\start=)\d+/, "")
-        .replace(/(\?start=)\d+/, "")
+        .replace(/(\&tc=)\d+/, "")
+        .replace(/(\tc=)\d+/, "")
+        .replace(/(\?tc=)\d+/, "")
     );
 
     $("#txtintegration").val(
       $("#txtintegration")
         .val()
-        .replace(/(start=)\d+&/, "")
+        .replace(/(tc=)\d+&/, "")
     );
     $("#txtposition").val("");
   }
