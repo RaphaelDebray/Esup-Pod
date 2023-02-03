@@ -12,16 +12,32 @@
    *  exemple vert 'univ-lille.fr' 2022
    ***/
   /*** Theme primary color ***/
-  --pod-primary: #1F7C85;
-  --bs-primary-rgb: 31, 131, 137;
+/*  --pod-primary: #1F7C85;
+  --bs-primary-rgb: 31, 131, 137;*/
   /* a light variant of primary color, used for button hover */
-  --pod-primary-lighten: #08b0a0;
+/*  --pod-primary-lighten: #08b0a0;*/
   /* a dark variant of primary color, used for active links and disabled buttons */
-  --pod-primary-darken: #18575D;
+/*  --pod-primary-darken: #18575D;*/
   /* les valeurs '...-dark' ci-dessous sont pour le mode sombre.*/
-  --pod-primary-dark: #1F7C85;
+/*  --pod-primary-dark: #1F7C85;
   --pod-primary-lighten-dark: #08b0a0;
-  --pod-primary-darken-dark: #18575D;
+  --pod-primary-darken-dark: #18575D;*/
+
+  /***
+   *  config utc
+   ***/
+  /*** Theme primary color ***/
+  --pod-primary: #184e5b;
+  --bs-primary-rgb: 24, 78, 91;
+  /* a light variant of primary color, used for button hover */
+  --pod-primary-lighten: #FFD700;
+  /* a dark variant of primary color, used for active links and disabled buttons */
+  --pod-primary-darken: #ffd700;
+  /* les valeurs '...-dark' ci-dessous sont pour le mode sombre.*/
+  --pod-primary-dark: #184e5b;
+  --pod-primary-lighten-dark: #ffd700;
+  --pod-primary-darken-dark: #ffff00;
+
 
   /***
    * Esup-Pod default colors
@@ -29,15 +45,18 @@
 
   /*** couleur de fond du site ***/
   --pod-background: #fff;
-  --pod-background-dark: #222831;
+/*  --pod-background-dark: #222831;*/
+  --pod-background-dark: #2a2a2a;
+
 
   /*** couleur du texte des boutons principaux ***/
-  --pod-btn-text: #fff;
-  --pod-btn-text-dark: #fff;
-
+  /*--pod-btn-text: #fff;
+  --pod-btn-text-dark: #184e5b;*/
+  --pod-btn-text: #ffffff;
+  --pod-btn-text-dark: #ffd700;
   /**** couleur de police ****/
   --pod-font-color: #000;
-  --pod-font-color-dark: #f8f9fa;
+  --pod-font-color-dark: #ffffff;
 
   /**** couleur neutre pour fond de bloc (ex jumbotron) ***/
   --pod-background-neutre1-bloc: #ddd;
@@ -45,7 +64,7 @@
 
   /**** couleur neutre 2 pour fond de bloc ***/
   --pod-background-neutre2-bloc: #f5f5f5;
-  --pod-background-neutre2-bloc-dark: #161c26;
+  --pod-background-neutre2-bloc-dark: #184e5b;
 
   /**** couleur des liens *****/
   --pod-link-color: var(--pod-primary);
