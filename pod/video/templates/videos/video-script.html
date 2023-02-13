@@ -133,6 +133,7 @@ player.on('firstplay', function(){
         //console.log('error!', error.code, error.type , error.message);
         if(player.src()=="" || player.src().indexOf("m3u8")!=-1){
           player.src(mp4_sources);
+          mp4_sources[mp4_sources.length-1].selected = true;
           player.controlBar.addChild('QualitySelector');
           player.play();
         }
@@ -140,6 +141,7 @@ player.on('firstplay', function(){
     });
   {% else %}
     player.src(mp4_sources);
+    mp4_sources[mp4_sources.length-1].selected = true;
     player.controlBar.addChild('QualitySelector');
   {% endif %}
   {% if video.overview %}
@@ -227,7 +229,9 @@ player.on('firstplay', function(){
 
 player.ready(function(){
   // disabling subtitles by default
-  player.textTracks()[0].mode = "disabled"
+  if (player.textTracks()[0]) {
+    player.textTracks()[0].mode = "disabled"
+  }
   player.offset({
     {% if request.GET.start and request.GET.start != '0' %}start : {{request.GET.start}},{%endif%}
     {% if request.GET.end and request.GET.end != '0' %}end : {{request.GET.end}},{%endif%}
