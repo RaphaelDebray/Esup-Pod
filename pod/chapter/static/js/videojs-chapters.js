@@ -80,7 +80,7 @@
             newA.addEventListener(
               "click",
               function () {
-                player.currentTime(this.attributes.start.value);
+                player.currentTime(parseInt(this.attributes.start.value));
               },
               false
             );
