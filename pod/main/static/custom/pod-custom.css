@@ -1,0 +1,52 @@
+/***
+ * This is a sample file to show some color themes to apply to Pod
+ *
+ * To customize Pod colors, symply duplicate this file
+ *  and rename it 'pod-custom.css'
+ *  then add a line `'CSS_OVERRIDE': 'custom/pod-custom.css',`in the `TEMPLATE_VISIBLE_SETTINGS`
+ *  of custom/settings_local.py
+ */
+
+/*
+ * Here is some color themes you can use:
+
+  * Sample blue theme
+  --pod-primary: #15819E;
+  --pod-primary-lighten: #1db1d8;
+  --pod-primary-darken:  #11677e;
+
+  * Sample green "univ-lille.fr 2022" theme
+  --pod-primary: #1F8389;
+  --pod-primary-lighten: #2cb8c1;
+  --pod-primary-darken:  #19696e;
+
+  * Sample pink "pod v2" theme
+  --pod-primary: #ae2573;
+  --pod-primary-lighten: #d53a92;
+  --pod-primary-darken:  #8b1e5c;
+
+When you customize colors, be aware of minimum contrasts for accessibility.
+Usefull tools :
+    * https://wave.webaim.org/ to test accessibility on a whole web page
+    * https://app.contrast-finder.org/ to find a suffisent contrast.
+
+****/
+  /***
+   *  config utc
+   ***/
+  /*** Theme primary color ***/
+  --pod-primary: #184e5b;
+  --bs-primary-rgb: 24, 78, 91;
+  /* a light variant of primary color, used for button hover */
+  --pod-primary-lighten: #FFD700;
+  /* a dark variant of primary color, used for active links and disabled buttons */
+  --pod-primary-darken: #ffd700;
+  /* les valeurs '...-dark' ci-dessous sont pour le mode sombre.*/
+  --pod-primary-dark: #184e5b;
+  --pod-primary-lighten-dark: #ffd700;
+  --pod-primary-darken-dark: #ffff00;
+  --pod-background-dark: #2a2a2a;
+  --pod-btn-text: #ffffff;
+  --pod-btn-text-dark: #ffd700;
+  --pod-font-color-dark: #ffffff;
+  --pod-background-neutre2-bloc-dark: #184e5b;
